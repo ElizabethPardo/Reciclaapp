@@ -4,18 +4,23 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
 
+import com.example.reciclaap.modelo.Local;
 import com.example.reciclaap.modelo.Usuario;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.util.ArrayList;
+
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 
 public class ApiClient {
     private static final String PATH="http://192.168.0.15:45455/Api/";
@@ -42,6 +47,14 @@ public class ApiClient {
 
         @GET("Usuario")
         Call<Usuario> MiPerfil(@Header("Authorization") String token);
+
+        @PUT("Propietario")
+        Call<Usuario> EditarPerfil(@Body Usuario usuario, @Header("Authorization") String token);
+
+        @GET("Local")
+        Call<ArrayList<Local>>ListaLocales(@Header("Authorization") String token);
+
+        Call<Local> EditarLocal(int id, String obtenerToken);
     }
 
     public  static String obtenerToken(Context context)

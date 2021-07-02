@@ -1,8 +1,8 @@
 package com.example.reciclaap.modelo;
-
+import java.io.Serializable;
 import java.util.Date;
 
-public class Canje {
+public class Canje implements Serializable {
 
     private int id;
     private Date fecha;

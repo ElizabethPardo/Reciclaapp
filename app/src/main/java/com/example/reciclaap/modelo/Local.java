@@ -1,6 +1,8 @@
 package com.example.reciclaap.modelo;
 
-public class Local {
+import java.io.Serializable;
+
+public class Local implements Serializable {
 
     private int id;
     private String cuilCuil;
@@ -83,7 +85,7 @@ public class Local {
         this.rubro = rubro;
     }
 
-    public boolean isEstado() {
+    public boolean getEstado() {
         return estado;
     }
 

@@ -1,8 +1,9 @@
 package com.example.reciclaap.modelo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class DaPuntos {
+public class DaPuntos implements Serializable {
 
     private int id;
     private Date fecha;

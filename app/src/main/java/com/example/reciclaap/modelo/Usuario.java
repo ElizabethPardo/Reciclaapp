@@ -5,6 +5,7 @@ public class Usuario
     private int id;
     private String nombre;
     private String apellido;
+    private String dni;
     private String telefono;
     private String direccion;
     private String email;
@@ -13,10 +14,11 @@ public class Usuario
     private boolean estado;
     private int puntos;
 
-    public Usuario(int id, String nombre, String apellido, String telefono, String direccion, String email, String clave, String foto, boolean estado, int puntos) {
+    public Usuario(int id, String nombre, String apellido,String dmi, String telefono, String direccion, String email, String clave, String foto, boolean estado, int puntos) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
+        this.dni=dni;
         this.telefono = telefono;
         this.direccion = direccion;
         this.email = email;
@@ -27,6 +29,9 @@ public class Usuario
     }
 
     public Usuario() {
+    }
+
+    public Usuario(int id, String toString, String toString1, String toString2, String toString3, String toString4, String email, String clave) {
     }
 
     public int getId() {
@@ -51,6 +56,14 @@ public class Usuario
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
     }
 
     public String getTelefono() {
